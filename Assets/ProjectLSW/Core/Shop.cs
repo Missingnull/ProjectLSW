@@ -51,5 +51,6 @@ public class Shop : MonoBehaviour
     public void ShowShopUI()
     {
         UIDocument.enabled = true;
+        UIDocument.GetComponent<UIController>().enabled = true;
     }
 }

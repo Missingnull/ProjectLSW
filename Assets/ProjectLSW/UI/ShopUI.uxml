@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/ProjectLSW/UI/DefaultStyle.uss?fileID=7433441132597879392&amp;guid=7318c419768e8914fbaf4d86a1c8bbbe&amp;type=3#DefaultStyle" />
-    <ui:VisualElement name="Background" style="background-color: rgba(0, 0, 0, 0.39); width: 96%; height: 100%; margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; -unity-text-outline-color: rgba(0, 0, 0, 0.39);">
+    <ui:VisualElement name="Background" style="background-color: rgba(0, 0, 0, 0.39); margin-left: 30px; margin-right: 30px; margin-top: 30px; margin-bottom: 30px; -unity-text-outline-color: rgba(0, 0, 0, 0.39);">
         <ui:GroupBox style="align-items: center;">
             <ui:Label text="Trade" display-tooltip-when-elided="true" name="Trade" class="label" style="align-items: stretch; left: auto; right: auto; position: relative;" />
         </ui:GroupBox>
@@ -9,28 +9,22 @@
             <ui:Label text="Shopkeeper" display-tooltip-when-elided="true" class="label" />
         </ui:GroupBox>
         <ui:GroupBox style="justify-content: center; align-items: flex-start; flex-direction: row;">
-            <ui:VisualElement name="PlayerItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 275px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-                <ui:GroupBox style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;">
-                    <ui:VisualElement class="item" style="flex-direction: row;" />
-                    <ui:VisualElement class="item" />
-                    <ui:VisualElement class="item" />
-                </ui:GroupBox>
+            <ui:VisualElement name="PlayerItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 186px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:GroupBox name="GroupPlayerItemsRow1" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;" />
             </ui:VisualElement>
-            <ui:VisualElement name="DividerIcon" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&amp;guid=3875942b9ef138e4c9f659ffd082b9ae&amp;type=3#arrow-left@2x&apos;); width: 142px; height: 76px;" />
-            <ui:VisualElement name="ShopItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 275px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-                <ui:GroupBox style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;">
-                    <ui:VisualElement class="item" style="flex-direction: row; background-image: url(&apos;project://database/Assets/Miniature%20Army%202D%20V.1/Sprite/miniature-army1024x768.png?fileID=21300250&amp;guid=15b2d2faaecad4bfb9edc6585d94f509&amp;type=3#merchant-body-red&apos;);" />
-                    <ui:VisualElement class="item" style="flex-direction: row;" />
-                    <ui:VisualElement class="item" />
+            <ui:VisualElement name="DividerIcon" style="background-image: url(&apos;project://database/Packages/com.unity.2d.tilemap/Editor/Icons/d_Grid.FlipX@2x.png?fileID=2800000&amp;guid=1f26945e970839e41ba35badd04237ef&amp;type=3#d_Grid.FlipX@2x&apos;); width: 142px; height: 76px;" />
+            <ui:VisualElement name="ShopItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 183px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:GroupBox style="width: 100%; height: 196px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;">
+                    <ui:Button text="$100" display-tooltip-when-elided="true" name="ShopItem1" tooltip="Click to Buy Item" class="item" style="background-image: url(&apos;project://database/Assets/Miniature%20Army%202D%20V.1/Sprite/miniature-army1024x768.png?fileID=21300250&amp;guid=15b2d2faaecad4bfb9edc6585d94f509&amp;type=3#merchant-body-red&apos;);" />
                 </ui:GroupBox>
             </ui:VisualElement>
         </ui:GroupBox>
-        <ui:GroupBox style="width: 100%; height: 133px; flex-direction: row;">
+        <ui:GroupBox name="GroupBox" style="width: 100%; height: 133px; flex-direction: row;">
             <ui:VisualElement style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; flex-direction: column; width: 100%; background-color: rgba(0, 0, 0, 0.39);">
                 <ui:Label text="Your Cash" display-tooltip-when-elided="true" name="YourCash" class="label" />
                 <ui:GroupBox style="flex-direction: row; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                     <ui:VisualElement name="CoinImage" style="background-image: url(&apos;project://database/Assets/Tiny%20RPG%20Forest/Artwork/sprites/misc/coin/coin-1.png?fileID=2800000&amp;guid=03b3b03d94fe64ca991436d28accda10&amp;type=3#coin-1&apos;); width: 23px; height: 37px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
-                    <ui:Label text="100$" display-tooltip-when-elided="true" name="CashValue" class="label" style="margin-left: 10px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-style: bold; font-size: 32px;" />
+                    <ui:Label text="100$" display-tooltip-when-elided="true" name="LabelPlayerCashValue" class="label" style="margin-left: 10px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-style: bold; font-size: 32px;" />
                 </ui:GroupBox>
             </ui:VisualElement>
             <ui:VisualElement style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; flex-direction: column; width: 100%; background-color: rgb(0, 0, 0);" />
@@ -38,7 +32,7 @@
                 <ui:Label text="Their Cash" display-tooltip-when-elided="true" name="TheirCash" class="label" />
                 <ui:GroupBox style="flex-direction: row; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                     <ui:VisualElement name="CoinImage" style="background-image: url(&apos;project://database/Assets/Tiny%20RPG%20Forest/Artwork/sprites/misc/coin/coin-1.png?fileID=2800000&amp;guid=03b3b03d94fe64ca991436d28accda10&amp;type=3#coin-1&apos;); width: 23px; height: 37px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
-                    <ui:Label text="300$" display-tooltip-when-elided="true" name="CashValue" class="label" style="margin-left: 10px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-style: bold; font-size: 32px;" />
+                    <ui:Label text="100$" display-tooltip-when-elided="true" name="LabelShopCashValue" class="label" style="margin-left: 10px; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-font-style: bold; font-size: 32px;" />
                 </ui:GroupBox>
             </ui:VisualElement>
         </ui:GroupBox>

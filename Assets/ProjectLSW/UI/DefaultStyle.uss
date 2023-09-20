@@ -15,5 +15,8 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(50, 50, 50, 255);
+    background-color: rgb(50, 50, 50);
+    -unity-font: initial;
+    font-size: 24px;
+    -unity-text-align: lower-left;
 }
