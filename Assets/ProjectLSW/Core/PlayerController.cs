@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
 
     public Rigidbody2D rb;
+    public BoxCollider2D boxCollider2D;
 
     Vector2 movement;
 
@@ -23,6 +24,12 @@ public class PlayerController : MonoBehaviour
         // Consume movement input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        // Interact with shopkeeper
+        if (Input.GetButtonDown("Interact"))
+        {
+            Debug.Log("Interacted");
+        }
     }
 
     private void FixedUpdate()
