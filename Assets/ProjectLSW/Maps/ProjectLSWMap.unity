@@ -14165,7 +14165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7003049384585811679, guid: 34dac371a257ae54598aec43c4f311cc, type: 3}
       propertyPath: m_Name
-      value: Shopkeeper
+      value: Shop
       objectReference: {fileID: 0}
     - target: {fileID: 8841414432340367746, guid: 34dac371a257ae54598aec43c4f311cc, type: 3}
       propertyPath: m_SortingOrder
