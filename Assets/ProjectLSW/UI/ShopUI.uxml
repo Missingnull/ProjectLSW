@@ -9,9 +9,21 @@
             <ui:Label text="Shopkeeper" display-tooltip-when-elided="true" class="label" />
         </ui:GroupBox>
         <ui:GroupBox style="justify-content: center; align-items: flex-start; flex-direction: row;">
-            <ui:VisualElement name="PlayerItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 275px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+            <ui:VisualElement name="PlayerItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 275px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:GroupBox style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;">
+                    <ui:VisualElement class="item" style="flex-direction: row;" />
+                    <ui:VisualElement class="item" />
+                    <ui:VisualElement class="item" />
+                </ui:GroupBox>
+            </ui:VisualElement>
             <ui:VisualElement name="DividerIcon" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&amp;guid=3875942b9ef138e4c9f659ffd082b9ae&amp;type=3#arrow-left@2x&apos;); width: 142px; height: 76px;" />
-            <ui:VisualElement name="ShopItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 275px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+            <ui:VisualElement name="ShopItems" style="background-color: rgb(0, 0, 0); width: 96%; height: 275px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:GroupBox style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; flex-direction: row;">
+                    <ui:VisualElement class="item" style="flex-direction: row; background-image: url(&apos;project://database/Assets/Miniature%20Army%202D%20V.1/Sprite/miniature-army1024x768.png?fileID=21300250&amp;guid=15b2d2faaecad4bfb9edc6585d94f509&amp;type=3#merchant-body-red&apos;);" />
+                    <ui:VisualElement class="item" style="flex-direction: row;" />
+                    <ui:VisualElement class="item" />
+                </ui:GroupBox>
+            </ui:VisualElement>
         </ui:GroupBox>
         <ui:GroupBox style="width: 100%; height: 133px; flex-direction: row;">
             <ui:VisualElement style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; flex-direction: column; width: 100%; background-color: rgba(0, 0, 0, 0.39);">
