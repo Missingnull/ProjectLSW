@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
+    public UnityEvent interact;
+
     public float moveSpeed = 1f;
 
     public Rigidbody2D rb;
@@ -25,10 +28,10 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        // Interact with shopkeeper
+        // Fire 'Interact' event
         if (Input.GetButtonDown("Interact"))
         {
-            Debug.Log("Interacted");
+            interact.Invoke();
         }
     }
 
