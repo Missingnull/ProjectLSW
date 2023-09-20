@@ -15,12 +15,6 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movement;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,6 +32,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Move the player character
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
     }
 }

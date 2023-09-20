@@ -20,22 +20,18 @@ public class Shop : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     // Detect the player entering/leaving the vicinity,
     // and listen/stop listening to 'interact' event
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        if (collision.attachedRigidbody.CompareTag("Player"))
+        if (collision.attachedRigidbody != null)
         {
-            playerController.interact.AddListener(ShowShopUI);
-            textLabel.text = "Press [F] to Shop";
+            if (collision.attachedRigidbody.CompareTag("Player"))
+            {
+                playerController.interact.AddListener(ShowShopUI);
+                textLabel.text = "Press [F] to Shop";
+            }
         }
     }
 
